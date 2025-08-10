@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "module": "ESNext",
+        "moduleResolution": "Bundler",
+        "target": "es6",
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": ".",
+        "paths": {
+            "react": ["node_modules/react"]
+        },
+        "jsx": "react-jsx",
+        "types": ["react"],
+        "allowImportingTsExtensions": true,
+        "strictNullChecks": true,
+        "strictFunctionTypes": true
+    },
+    "include": ["src"],
+    "exclude": [
+        "node_modules",
+        "**/node_modules/*"
+    ]
+}
