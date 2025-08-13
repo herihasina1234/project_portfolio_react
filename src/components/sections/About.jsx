@@ -33,7 +33,7 @@ export const About = () => {
                     About Me
                 </h2>
 
-                <div className="glass rounded-xl p-8 border-white/10 border hover:translate-y-1 transition-all">
+                <div className="rounded-xl p-8 border-white/10 border hover:translate-y-1 transition-all">
                     <p className="text-gray-300 mb-6">
                         Passionate Developer with great patience, perseverance, and potential.
                     </p>
@@ -84,30 +84,30 @@ export const About = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
                         <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
-                        <h3 className="text-xl font-bold mb-4"> 🏫 Education </h3>
-                        <ul className="list-disc list-inside text-gray-300 space-y-2">
-                            <li>
-                                <strong> First year of a Master’s degree in Computer Science. </strong> - IT University
-                                (2023-2024)
-                            </li>
-                            <li>
-                                <strong> Bachelor’s degree in Computer Science with a focus on Databases and Networking. </strong> - IT University
-                                (2019-2022)
-                            </li>                            
-                        </ul>
+                            <h3 className="text-xl font-bold mb-4"> 🏫 Education </h3>
+                            <ul className="list-disc list-inside text-gray-300 space-y-2">
+                                <li>
+                                    <strong> First year of a Master’s degree in Computer Science. </strong> - IT University
+                                    (2023-2024)
+                                </li>
+                                <li>
+                                    <strong> Bachelor’s degree in Computer Science with a focus on Databases and Networking. </strong> - IT University
+                                    (2019-2022)
+                                </li>                            
+                            </ul>
                         </div>
                         <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
-                        <h3 className="text-xl font-bold mb-4"> 💼 Work Experience </h3>
-                        <div className="space-y-4 text-gray-300">
-                            <div>
-                                <h4 className="font-semibold">
-                                    Internship for the completion of the Bachelor’s degree (September 2021 - December 2021)
-                                </h4>
-                                <p>
-                                    Development and implementation of a web and a mobile server monitoring system.
-                                </p>
-                            </div>                            
-                        </div>
+                            <h3 className="text-xl font-bold mb-4"> 💼 Work Experience </h3>
+                            <div className="space-y-4 text-gray-300">
+                                <div>
+                                    <h4 className="font-semibold">
+                                        Internship for the completion of the Bachelor’s degree (September 2021 - December 2021)
+                                    </h4>
+                                    <p>
+                                        Development and implementation of a web and a mobile server monitoring system.
+                                    </p>
+                                </div>                            
+                            </div>
                         </div>
                     </div>
                 </div>
