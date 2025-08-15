@@ -1,15 +1,17 @@
 import { useState } from "react";
 import { RevealOnScroll } from "../RevealOnScroll";
+import { Popup } from "../PopUp";
 import emailjs from "emailjs-com";
 
 export const Contact = () => {
+    const [popup, setPopup] = useState({ show: false, message: "", type: "" });
     const [formData, setFormData] = useState({
         name: "",
         email: "",
         message: "",
     });
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e) => {                     
         e.preventDefault();
 
         emailjs
@@ -19,11 +21,11 @@ export const Contact = () => {
             e.target,
             import.meta.env.VITE_PUBLIC_KEY
         )
-        .then((result) => {
-            alert("Message Sent!");
+        .then(() => {
+            setPopup({ show: true, message: "Message Sent!", type: "success" });
             setFormData({ name: "", email: "", message: "" });
         })
-        .catch(() => alert("Oops! Something went wrong. Please try again."));
+        .catch( () => setPopup({ show: true, message: "Oops! Something went wrong. Please try again.", type: "error" }) )        
     };
 
     return (
@@ -31,11 +33,20 @@ export const Contact = () => {
             id="contact"
             className="min-h-screen flex items-center justify-center py-20"
         >
-            <RevealOnScroll>
+            <RevealOnScroll>                            
+                {popup.show && (
+                    <Popup
+                    message={popup.message}
+                    type={popup.type}
+                    onClose={() => setPopup({ ...popup, show: false })}
+                    />
+                )}
+
                 <div className="px-4 w-full min-w-[300px] md:w-[500px] sm:w-2/3 p-6">
-                    <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">                    
+                    <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent text-center">                    
                         Get In Touch
-                    </h2>
+                    </h2>                                                      
+
                     <form className="space-y-6" onSubmit={handleSubmit}>
                         <div className="relative">
                             <input
@@ -44,7 +55,7 @@ export const Contact = () => {
                                 name="name"
                                 required
                                 value={formData.name}
-                                className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
+                                className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-indigo-500 focus:bg-indigo-500/5"
                                 placeholder="Name..."
                                 onChange={ (e) =>
                                     setFormData({ ...formData, name: e.target.value })
@@ -59,7 +70,7 @@ export const Contact = () => {
                                 name="email"
                                 required
                                 value={formData.email}
-                                className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
+                                className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-indigo-500 focus:bg-indigo-500/5"
                                 placeholder="example@gmail.com"
                                 onChange={ (e) =>
                                     setFormData({ ...formData, email: e.target.value })
@@ -74,7 +85,7 @@ export const Contact = () => {
                                 required
                                 rows={5}
                                 value={formData.message}
-                                className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
+                                className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-indigo-500 focus:bg-indigo-500/5"
                                 placeholder="Your Message..."
                                 onChange={ (e) =>
                                     setFormData({ ...formData, message: e.target.value })
@@ -84,7 +95,7 @@ export const Contact = () => {
 
                         <button
                             type="submit"
-                            className="w-full bg-blue-500 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)]"
+                            className="w-full bg-indigo-500 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)]"
                         >
                             Send Message
                         </button>
