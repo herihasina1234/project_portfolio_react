@@ -4,7 +4,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
         <div className="max-w-5xl mx-auto px-4">
             <div className="flex justify-between items-center h-16">                               
                 <a
-                    href="/project_portfolio_react/CV_rasamimanana_venance_herihasina.pdf"
+                    href={`${import.meta.env.BASE_URL}CV_rasamimanana_venance_herihasina.pdf`}
                     download="CV_rasamimanana_venance_herihasina.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
