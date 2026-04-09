@@ -8,6 +8,7 @@ export const About = () => {
         "Javascript",
         "Typescript",
         "TailwindCSS",
+        "Bootstrap",
         "JSP",
     ];
 
@@ -15,7 +16,16 @@ export const About = () => {
         "Node.js", 
         "PHP", 
         "Python", 
-        "JAVA"
+        "Django",
+        "JAVA",
+        "SpringBoot",
+        "JPA",
+        "Hibernate",
+        "WEKA",
+        "PHP",
+        "CodeIgniter",
+        "Symfony",
+        ".NET"
     ];
 
     const dataSkills = [       
@@ -23,7 +33,38 @@ export const About = () => {
         "MySQL",
         "PostgreSQL",
         "SQLServer",
-        "Oracle Database 12c"        
+        "Oracle Database 12c",  
+        "SQLite"
+    ];
+
+    const desktop = [
+        "Tauri",
+        "Python KIVI",
+        "JAVA SWING"
+    ];
+
+    const webApis = [
+        "REST",
+        "SOAP"
+    ];
+
+    const mobile = [
+        "JAVA ANDROID",
+        "IONIC"
+    ];
+
+    const deployments = [
+        "Git",
+        "Github",
+        "Vercel"
+    ];
+
+    const methods = [
+        "UML", 
+        "Merise",
+        "Agile",
+        "Scrum", 
+        "Design Patterns"
     ];
 
     return (
@@ -72,6 +113,48 @@ export const About = () => {
                             </div>
 
                             <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
+                                <h3 className="text-xl font-bold mb-4"> Desktop</h3>
+                                <div className="flex flex-wrap gap-2">
+                                    {desktop.map((tech, key) => (
+                                        <span
+                                            key={key}
+                                            className="bg-indigo-500/10 text-slate-300 py-1 px-3 rounded-full text-sm hover:bg-indigo-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition"
+                                        >
+                                            {tech}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+
+                            <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
+                                <h3 className="text-xl font-bold mb-4"> Web & API</h3>
+                                <div className="flex flex-wrap gap-2">
+                                    {webApis.map((tech, key) => (
+                                        <span
+                                            key={key}
+                                            className="bg-indigo-500/10 text-slate-300 py-1 px-3 rounded-full text-sm hover:bg-indigo-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition"
+                                        >
+                                            {tech}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+
+                            <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
+                                <h3 className="text-xl font-bold mb-4"> Mobile</h3>
+                                <div className="flex flex-wrap gap-2">
+                                    {mobile.map((tech, key) => (
+                                        <span
+                                            key={key}
+                                            className="bg-indigo-500/10 text-slate-300 py-1 px-3 rounded-full text-sm hover:bg-indigo-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition"
+                                        >
+                                            {tech}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+
+                            <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
                                 <h3 className="text-xl font-bold mb-4"> Database</h3>
                                 <div className="flex flex-wrap gap-2">
                                     {dataSkills.map((tech, key) => (
@@ -84,6 +167,35 @@ export const About = () => {
                                     ))}
                                 </div>
                             </div>
+
+                            <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
+                                <h3 className="text-xl font-bold mb-4"> Deployment</h3>
+                                <div className="flex flex-wrap gap-2">
+                                    {deployments.map((tech, key) => (
+                                        <span
+                                            key={key}
+                                            className="bg-indigo-500/10 text-slate-300 py-1 px-3 rounded-full text-sm hover:bg-indigo-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition"
+                                        >
+                                            {tech}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+
+                            <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
+                                <h3 className="text-xl font-bold mb-4"> Methods</h3>
+                                <div className="flex flex-wrap gap-2">
+                                    {methods.map((tech, key) => (
+                                        <span
+                                            key={key}
+                                            className="bg-indigo-500/10 text-slate-300 py-1 px-3 rounded-full text-sm hover:bg-indigo-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition"
+                                        >
+                                            {tech}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+
                         </div>
                     </div>
 

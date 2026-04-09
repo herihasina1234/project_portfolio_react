@@ -13,6 +13,7 @@ export const Projects = () => {
                 Featured Projects
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {/* salon de beaute */}
                     <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-indigo-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition">
                         <h3 className="text-xl font-bold mb-2"> beauty salon</h3>
                         <p className="text-gray-400 mb-4">
@@ -39,7 +40,47 @@ export const Projects = () => {
                             View Project →
                         </a>
                         </div>
-                    </div>                                    
+                    </div>             
+
+                   {/* pedale bleutooth */}
+                   <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-indigo-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition">
+                        <h3 className="text-xl font-bold mb-2">Bluetooth Pedal</h3>
+                        <p className="text-gray-400 mb-4">
+                        Design and fabrication of a wireless Bluetooth pedal enabling users to turn flipbook pages, scroll through sheet music, or control a tablet/computer by simulating keyboard keystrokes. The project was specifically designed for musicians reading digital sheet music.
+                        </p>
+                        <div className="flex flex-wrap gap-2 mb-4">
+                        {["Arduino", "Esp 32", "Underclocking", "Electronic", "Power saving"].map((tech, key) => (
+                            <span
+                            key={key}
+                            className="bg-blue-500/10 text-indigo-500 py-1 px-3 rounded-full text-sm hover:bg-indigo-500/20 
+                                            hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all
+                            "
+                            >
+                            {tech}
+                            </span>
+                        ))}
+                        </div>                        
+                    </div>  
+
+                    {/* librairie musicale */}
+                   <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-indigo-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition">
+                        <h3 className="text-xl font-bold mb-2">Music Library Application</h3>
+                        <p className="text-gray-400 mb-4">
+                        Design and development of a desktop application for music library management, enabling organization, advanced search, and quick access to sheet music through metadata and custom filters.
+                        </p>
+                        <div className="flex flex-wrap gap-2 mb-4">
+                        {["React", "TailwindCss", "Tauri", "SQLite"].map((tech, key) => (
+                            <span
+                            key={key}
+                            className="bg-blue-500/10 text-indigo-500 py-1 px-3 rounded-full text-sm hover:bg-indigo-500/20 
+                                            hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all
+                            "
+                            >
+                            {tech}
+                            </span>
+                        ))}
+                        </div>                        
+                    </div>  
                 </div>
             </div>
         </RevealOnScroll>
